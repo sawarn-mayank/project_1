@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Blogger</title>
+        <link href="{% static "css/blog.css" %}" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
+    </head>
+
+    <body>
+        <style>
+            body {
+            font-family: "Roboto", sans-serif;
+            font-size: 17px;
+            background-color: #fdfdfd;
+        }
+        .shadow {
+            box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        }
+        .btn-danger {
+            color: #fff;
+            background-color: #f00000;
+            border-color: #dc281e;
+        }
+        .masthead {
+            background: #3398E1;
+            height: auto;
+            padding-bottom: 15px;
+            box-shadow: 0 16px 48px #E3E7EB;
+            padding-top: 10px;
+        }
+    </style>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item text-black">
+                            <a class="nav-link text-black font-weight-bold" href="https://www.linkedin.com/in/mayank-sawarn-ab5549155/">About</a>
+                        </li>
+                        <li class="nav-item text-black">
+                            <a class="nav-link text-black font-weight-bold" href="https://termly.io/resources/articles/blog-privacy-policy/#:~:text=A%20blog%20privacy%20policy%20is%20a%20legal%20page%20on%20your,collects%20and%20uses%20personal%20information.&text=Personal%20information%20is%20any%20information,Names">Policy</a>
+                        </li>
+                        <li class="nav-item text-black">
+                            <a class="nav-link text-black font-weight-bold" href="https://www.twitter.com/sawarn_mayank/">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+	{% block sidebar %}
+
+	<style>
+        	.card{
+	            box-shadow: 0 16px 48px #E3E7EB;
+        	}
+       
+	</style>
+
+	<!-- Sidebar Widgets Column -->
+	<div class="col-md-4 float-right ">
+	<div class="card my-4">
+	        <h5 class="card-header">About Us</h5>
+	    <div class="card-body">
+	        <p class="card-text"> This blog is made for internship purpose.</p>
+        	<a href="https://www.twitter.com/sawarn_mayank/"
+	           class="btn btn-danger">Know more!</a>
+	    </div>
+	</div>
+	</div>
+	{% endblock sidebar %}
+        <!-- Footer -->
+        <footer class="py-3 bg-grey">
+            <p class="m-0 text-dark text-center ">Copyright &copy; Blogger</p>
+        </footer>
+    </body>
+</html>
